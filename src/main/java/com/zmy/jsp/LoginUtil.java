@@ -10,6 +10,6 @@ public class LoginUtil {
     public boolean login(String name,String psd){
         System.out.println(name+psd);
         JDBCUtils jdbcUtils = new JDBCUtils();
-        return jdbcUtils.Query(name,psd);
+        return jdbcUtils.isLogin(name,psd);
     }
 }

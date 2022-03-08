@@ -1,6 +1,8 @@
 package com.zmy.jsp;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Sam  Email:superdouble@yeah.net
@@ -31,7 +33,13 @@ public class JDBCUtils {
         return con;
     }
 
-    public boolean Query(String user,String psd){
+    /**
+     * 登录确认
+     * @param user
+     * @param psd
+     * @return
+     */
+    public boolean isLogin(String user,String psd){
         String sql = "select * from user where user=? and password=?";
         getConn();
         try {
@@ -48,12 +56,44 @@ public class JDBCUtils {
         } catch (SQLException e) {
             e.printStackTrace();
         }finally {
-            CloseResource(con,ps,rs);
+            CloseResource();
         }
         return false;
     }
 
-    public void CloseResource(Connection con,PreparedStatement ps,ResultSet rs){
+    /**
+     * 查询出所有员工
+     * @param clazz
+     * @return
+     */
+    public List<User> Query(User clazz){
+        List <User> list = new ArrayList<>();
+        try {
+            getConn();
+            String  sql = "select * from user";
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next()){
+                User user = new User(
+                        rs.getString(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4)
+                );
+                list.add(user);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            CloseResource();
+        }
+        return list;
+    }
+
+    /**
+     * 关闭资源
+     */
+    public void CloseResource(){
         try {
             if (rs!=null)
                 rs.close();
