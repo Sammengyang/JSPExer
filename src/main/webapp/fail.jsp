@@ -9,12 +9,9 @@
 <html>
 <head>
     <title>登录失败</title>
-    <script type="text/javascript">
-        document.
-    </script>
 </head>
 <body>
-    <a href="Login.jsp">返回登录页面</a>
-
+    <p>登录失败，三秒后跳转到登录页面.....</p>
+    <meta http-equiv="refresh" content="3;URL=Login.jsp">
 </body>
 </html>

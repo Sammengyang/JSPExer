@@ -8,7 +8,6 @@ package com.zmy.jsp;
 public class LoginUtil {
 
     public boolean login(String name,String psd){
-        System.out.println(name+psd);
         JDBCUtils jdbcUtils = new JDBCUtils();
         return jdbcUtils.isLogin(name,psd);
     }
