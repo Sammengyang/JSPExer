@@ -10,7 +10,7 @@ import java.util.List;
  * @create 2022-03-08 17:13
  */
 public class JDBCUtils {
-    static String url = "jdbc:mysql://localhost:3306/javatest?rewriteBatchedStatements=true";
+    static String url = "jdbc:mysql://localhost:3306/javatest?rewriteBatchedStatements=true&useSSL=false";
     static String user = "root";
     static String password = "123456";
     static Connection con = null;
@@ -23,10 +23,8 @@ public class JDBCUtils {
      */
     public Connection getConn(){
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+//            Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(url, user, password);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }
