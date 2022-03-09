@@ -1,14 +1,14 @@
 <%--
   Created by IntelliJ IDEA.
   User: Sam
-  Date: 2022/3/8
-  Time: 15:52
+  Date: 2022/3/9
+  Time: 11:13
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>登录</title>
+    <title>Title</title>
     <script src="js/jquery-3.6.0.js" type="text/javascript"></script>
     <style>
         #login{
@@ -31,18 +31,30 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="login">
-        <form action="doLogin.jsp" method="post">
-            <div class="input-group input-group-lg">
-                <span class="input-group-addon" id="username" >账号</span>
-                <input type="text" class="form-control" name="username" placeholder="Username" aria-describedby="sizing-addon1">
-            </div><br>
-            <div class="input-group input-group-lg">
-                <span class="input-group-addon" id="password" >密码</span>
-                <input type="password" class="form-control" name="password" placeholder="password" aria-describedby="sizing-addon1">
-            </div><br>
-            <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-    </div>
+<div id="login">
+    <form action="doLogin.jsp" method="post">
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="username" >用户名</span>
+            <input type="text" class="form-control" name="username" placeholder="Username" aria-describedby="sizing-addon1">
+        </div><br>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="password" >密码</span>
+            <input type="password" class="form-control" name="password" placeholder="password" aria-describedby="sizing-addon1">
+        </div><br>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="name" >姓名</span>
+            <input type="text" class="form-control" name="sex" placeholder="name" aria-describedby="sizing-addon1">
+        </div><br>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sex" >性别</span>
+            <input type="text" class="form-control" name="sex" placeholder="sex" aria-describedby="sizing-addon1">
+        </div><br>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="hobby" >爱好</span>
+            <input type="text" class="form-control" name="hobby" placeholder="hobby" aria-describedby="sizing-addon1">
+        </div><br>
+        <button type="submit" class="btn btn-default">Submmit</button>
+    </form>
+</div>
 </body>
 </html>

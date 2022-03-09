@@ -10,25 +10,25 @@ public class User {
     private String password;
     private String name;
     private String sex;
+    private String hobby;
 
     public User() {
     }
 
-    public User(String user, String password, String name, String sex) {
+    public User(String user, String password, String name, String sex, String hobby) {
         this.user = user;
         this.password = password;
         this.name = name;
         this.sex = sex;
+        this.hobby = hobby;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "user='" + user + '\'' +
-                ", password='" + password + '\'' +
-                ", name='" + name + '\'' +
-                ", sex='" + sex + '\'' +
-                '}';
+    public String getHobby() {
+        return hobby;
+    }
+
+    public void setHobby(String hobby) {
+        this.hobby = hobby;
     }
 
     public String getUser() {

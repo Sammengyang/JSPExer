@@ -11,14 +11,8 @@ public class Test111 {
     @Test
     public void test1(){
         JDBCUtils jdbcUtils = new JDBCUtils();
-        System.out.println(jdbcUtils.isLogin("sdfa", "asdfsd"));
-//        System.out.println(jdbcUtils.isLogin("sam", "123456"));
-//        List<User> query = jdbcUtils.Query(new User());
-//        Iterator iterator = query.iterator();
-//        while (iterator.hasNext()){
-//            User user = (User) iterator.next();
-//            System.out.println(user.toString());
-//        }
+        boolean login = jdbcUtils.Login(new User("1", "1", "1", "1", "1"));
+        System.out.println(login);
     }
 
 }
