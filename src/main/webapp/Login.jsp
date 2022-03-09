@@ -5,6 +5,8 @@
   Time: 11:13
   To change this template use File | Settings | File Templates.
 --%>
+<%  request.setCharacterEncoding( "utf-8");%>
+<% response.setCharacterEncoding("utf-8"); %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -49,10 +51,11 @@
             <span class="input-group-addon" id="sex" >性别</span>
             <input type="text" class="form-control" name="sex" placeholder="sex" aria-describedby="sizing-addon1">
         </div><br>
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="hobby" >爱好</span>
-            <input type="text" class="form-control" name="hobby" placeholder="hobby" aria-describedby="sizing-addon1">
-        </div><br>
+        <label class="checkbox-inline">
+            <input type="checkbox"  value="篮球" name="hobby"> 篮球<br>
+            <input type="checkbox"  value="爬山" name="hobby"> 爬山<br>
+            <input type="checkbox"  value="电影" name="hobby"> 电影<br>
+        </label><br>
         <button type="submit" class="btn btn-default">Submmit</button>
     </form>
 </div>

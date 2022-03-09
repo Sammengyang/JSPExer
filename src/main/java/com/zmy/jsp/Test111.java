@@ -13,7 +13,7 @@ public class Test111 {
         JDBCUtils jdbcUtils = new JDBCUtils();
         //JSP_war_exploded
         // 测是登录
-        System.out.println(jdbcUtils.Register("Sam_zmy", "11"));
+        System.out.println(jdbcUtils.Register("adfasd", "11"));
     }
 
 }

@@ -1,4 +1,7 @@
-<%@ page import="com.zmy.jsp.RegisterUtil" %><%--
+<%@ page import="com.zmy.jsp.RegisterUtil" %>
+<%@ page import="com.zmy.jsp.JDBCUtils" %>
+<%@ page import="com.zmy.jsp.User" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: Sam
   Date: 2022/3/8
@@ -15,8 +18,6 @@
 <%
     String username = request.getParameter("username");
     String password = request.getParameter("password");
-    String [] hobby = request.getParameterValues("hobby");
-    request.setAttribute("hobby",hobby);
     RegisterUtil loginUtil = new RegisterUtil();
     boolean register = loginUtil.Register(username, password);
     if (register){

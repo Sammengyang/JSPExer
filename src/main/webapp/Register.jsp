@@ -34,10 +34,11 @@
 
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <div id="register">
-        <form action="index.jsp" method="post">
+        <form action="doRegister.jsp" method="post">
             <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="username" >账号</span>
                 <input type="text" class="form-control" name="username" placeholder="Username" aria-describedby="sizing-addon1">
@@ -46,12 +47,6 @@
                 <span class="input-group-addon" id="password" >密码</span>
                 <input type="password" class="form-control" name="password" placeholder="password" aria-describedby="sizing-addon1">
             </div><br>
-
-            <div>
-                <input type="checkbox" value="hinking" name="hobby">爬山<br>
-                <input type="checkbox" value="bask" name="hobby">篮球<br>
-                <input type="checkbox" value="movie" name="hobby">电影<br>
-            </div>
             <button type="submit" class="btn btn-default">登录</button>
             <button type="button" class="btn btn-default" onclick="gologin()">注册</button>
         </form>
