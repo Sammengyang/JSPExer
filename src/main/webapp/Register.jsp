@@ -37,7 +37,7 @@
 </head>
 <body>
     <div id="register">
-        <form action="doRegister.jsp" method="post">
+        <form action="index.jsp" method="post">
             <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="username" >账号</span>
                 <input type="text" class="form-control" name="username" placeholder="Username" aria-describedby="sizing-addon1">

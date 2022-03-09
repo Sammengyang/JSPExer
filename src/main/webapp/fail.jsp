@@ -12,6 +12,6 @@
 </head>
 <body>
     <p>登录失败，三秒后跳转到登录页面.....</p>
-    <meta http-equiv="refresh" content="3;URL=Login.jsp">
+    <meta http-equiv="refresh" content="3;URL=Register.jsp">
 </body>
 </html>

@@ -11,8 +11,9 @@ public class Test111 {
     @Test
     public void test1(){
         JDBCUtils jdbcUtils = new JDBCUtils();
-        boolean login = jdbcUtils.Login(new User("1", "1", "1", "1", "1"));
-        System.out.println(login);
+        //JSP_war_exploded
+        // 测是登录
+        System.out.println(jdbcUtils.Register("Sam_zmy", "11"));
     }
 
 }

@@ -34,7 +34,7 @@ public class JDBCUtils {
     }
     // 登录
     public boolean Register(String user,String password){
-        String login = isLogin(user, password);
+        String login = isExist(user, password);
         if (login!=null){
             return true;
         }
@@ -42,7 +42,7 @@ public class JDBCUtils {
     }
     // 注册
     public boolean Login(User user){
-        String login = isLogin(user.getName(), user.getPassword());
+        String login = isExist(user.getName(), user.getPassword());
         if (login==null){
             // 注册成功添加到数据库
             AddOne(user);
@@ -56,7 +56,7 @@ public class JDBCUtils {
      * @param psd
      * @return
      */
-    public String isLogin(String user,String psd){
+    public String isExist(String user,String psd){
         String sql = "select * from user where user=? and password=?";
         getConn();
         try {
@@ -64,7 +64,7 @@ public class JDBCUtils {
             ps = con.prepareStatement(sql);
             // 填充占位符
             ps.setObject(1,user);
-            ps.setObject(2,password);
+            ps.setObject(2,psd);
             // 执行sql语句
             rs = ps.executeQuery();
             if (rs.next()){

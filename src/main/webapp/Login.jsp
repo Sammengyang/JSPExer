@@ -43,7 +43,7 @@
         </div><br>
         <div class="input-group input-group-lg">
             <span class="input-group-addon" id="name" >姓名</span>
-            <input type="text" class="form-control" name="sex" placeholder="name" aria-describedby="sizing-addon1">
+            <input type="text" class="form-control" name="name" placeholder="name" aria-describedby="sizing-addon1">
         </div><br>
         <div class="input-group input-group-lg">
             <span class="input-group-addon" id="sex" >性别</span>

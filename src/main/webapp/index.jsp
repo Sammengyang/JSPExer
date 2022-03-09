@@ -41,11 +41,14 @@
             JDBCUtils jdbcUtils = new JDBCUtils();
             List<User> query = jdbcUtils.Query(new User());
             Iterator iterator = query.iterator();
-            String str ="";
-            String [] hobby = (String[]) request.getAttribute("hobby");
-            for (int i=0;i<hobby.length;i++){
-                str+=hobby[i]+" ";
-            }
+            /**
+             * 获取复选框的数
+             */
+//            String str ="";
+//            String [] hobby = (String[]) request.getAttribute("hobby");
+//            for (int i=0;i<hobby.length;i++){
+//                str+=hobby[i]+" ";
+//            }
             while (iterator.hasNext()){
             User user = (User) iterator.next();
         %>
@@ -54,7 +57,7 @@
             <td><%=user.getSex()%></td>
             <td><%=user.getUser()%></td>
             <td><%=user.getPassword()%></td>
-            <td><%=str%></td>
+            <td><%=user.getHobby()%></td>
         </tr>
         <%
             }
