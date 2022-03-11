@@ -21,8 +21,10 @@
     String sex = request.getParameter("sex");
     String hobby = "";
     String[] hobbies = request.getParameterValues("hobby");
-    for (int i = 0; i < hobbies.length; i++) {
-        hobby+=hobbies[i]+" ";
+    if (hobbies!=null){
+        for (int i = 0; i < hobbies.length; i++) {
+            hobby+=hobbies[i]+" ";
+        }
     }
     RegisterUtil loginUtil = new RegisterUtil();
     User user = new User(username,password,name,sex,hobby);

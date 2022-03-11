@@ -54,6 +54,7 @@
         %>
         <tr>
             <td><%=user.getName()%></td>
+            <td>${user.getName()}</td>
             <td><%=user.getSex()%></td>
             <td><%=user.getUser()%></td>
             <td><%=user.getPassword()%></td>

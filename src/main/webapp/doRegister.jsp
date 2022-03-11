@@ -18,11 +18,16 @@
 <%
     String username = request.getParameter("username");
     String password = request.getParameter("password");
+    String role = request.getParameter("role");
     RegisterUtil loginUtil = new RegisterUtil();
     boolean register = loginUtil.Register(username, password);
     if (register){
         request.getRequestDispatcher("index.jsp").forward(request,response);
     }else {
+        // 将用户名放入cookie中
+        Cookie cookie = new Cookie("username",username);
+        // 把cookie发送到客户端
+        response.addCookie(cookie);
         request.getRequestDispatcher("fail.jsp").forward(request,response);
     }
 %>

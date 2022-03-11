@@ -65,6 +65,7 @@ public class JDBCUtils {
             // 填充占位符
             ps.setObject(1,user);
             ps.setObject(2,psd);
+
             // 执行sql语句
             rs = ps.executeQuery();
             if (rs.next()){

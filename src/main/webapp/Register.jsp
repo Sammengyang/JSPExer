@@ -20,6 +20,11 @@
             background-image: url("img/canvas4.png");
             background-repeat: no-repeat;
         }
+        .center-block {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
     <script type="text/javascript">
         function gologin(){
@@ -37,16 +42,29 @@
 
 </head>
 <body>
-    <div id="register">
+    <%
+        String username="";
+        Cookie[] cookies = request.getCookies();
+        for (int i = 0; i < cookies.length; i++) {
+            if ("username".equals(cookies[i].getName())){
+                username=cookies[i].getValue();
+            }
+        }
+    %>
+    <div id="register" class="center-block">
         <form action="doRegister.jsp" method="post">
             <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="username" >账号</span>
-                <input type="text" class="form-control" name="username" placeholder="Username" aria-describedby="sizing-addon1">
+                <input type="text" class="form-control" value="<%=username%>" name="username" placeholder="Username" aria-describedby="sizing-addon1">
             </div><br>
             <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="password" >密码</span>
                 <input type="password" class="form-control" name="password" placeholder="password" aria-describedby="sizing-addon1">
             </div><br>
+            <div>
+                <input type="radio" value="student" name="role" > student
+                <input type="radio" value="teacher" name="role" > teacher
+            </div>
             <button type="submit" class="btn btn-default">登录</button>
             <button type="button" class="btn btn-default" onclick="gologin()">注册</button>
         </form>
